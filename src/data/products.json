@@ -1,0 +1,47 @@
+[
+  { "name": "one" ,
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  },
+  { "name": "two",
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  },
+  { "name": "three" ,
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  },
+  { "name": "four" ,
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  },
+  { "name": "five",
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  },
+  { "name": "six" ,
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  },
+  { "name": "seven" ,
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  },
+  { "name": "eight" ,
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  },
+  { "name": "nine" ,
+    "description": "handmade",
+    "price": "€ 5",
+    "imageUrl": "url"
+  }
+]
