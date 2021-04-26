@@ -1,0 +1,31 @@
+.product__container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    font-family: var(--font-text);
+}
+
+.product {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    padding: 1rem;
+}
+
+.product__image {
+    width: 50%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: var(--font-text);
+    align-items: center;
+}
+
+

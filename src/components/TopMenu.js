@@ -1,12 +1,13 @@
 import {NavLink} from 'react-router-dom'
 import './TopMenu.css';
+import Logo from '../assets/logo.png'
 
 function TopMenu() {
     return (
         <nav>
             <div className="nav-buttons">
                 <h2>Het Kralen Meisje</h2>
-                <p>HIER KOMT HET LOGO EN PROFILE, WINKELWAGEN BUTTON</p>
+                <img className="logo" src={Logo} />
             </div>
             <div className="menu-items">
                 <ul>

@@ -1,31 +1,24 @@
-import Products from "../data/products.json";
-import ProductExample from "../assets/kralenmeisje.PNG";
-import './Product.css';
+import products from "../data/products.json";
+
+import './ProductList.css';
+import Product from "./Product";
 
 
-function Product() {
+function ProductList() {
     return (
         <>
-        <h1>Producten</h1>
-    <div className="product-information">
-        <ol>
-            {Products.map((product, index) => {
-                return <ul>
-                    <li>
-                        <img src={ProductExample}/>
-                    </li>
-
-                    <li>{product.name}
-                        {product.description}
-                        {product.price}</li>
-                    <button>Shop nu</button>
-
+            <h1>Producten</h1>
+            <div className="product__container">
+            <div className="product">
+                <ul>
+                    {products.map((product, index) => {
+                        return <Product product={product}/>
+                    })};
                 </ul>
-            })};
-        </ol>
-    </div>
+            </div>
+            </div>
         </>
     )
 }
 
-export default Product;
+export default ProductList;

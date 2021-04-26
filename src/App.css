@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: black;
+    --color-secundary: pink;
+    --font-size: 1rem;
+    --font-color: black;
+    --font-text: 'The Girl Next Door', cursive;
+    --font-title: 'Open Sans';
+}
+
+
