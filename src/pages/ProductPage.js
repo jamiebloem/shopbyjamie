@@ -2,11 +2,15 @@ import './ProductPage.css';
 
 import ProductList from "../components/ProductList";
 
-function ProductPage() {
+function ProductPage(props) {
+    const { onAdd } = props;
 
 
     return (
-        <ProductList />
+
+        <>
+            <ProductList onAdd={onAdd}/>
+        </>
     )
 };
 

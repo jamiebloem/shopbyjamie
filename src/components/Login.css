@@ -1,0 +1,21 @@
+.login-errors {
+    color: red;
+    font-size: 0.5rem;
+    padding-bottom: 0.5rem;
+
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.login-button {
+    width: 5rem;
+}
+
+h3 {
+    padding-top: 2rem;
+}

@@ -1,0 +1,13 @@
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: var(--font-family);
+}
+
+
+
+
+.error {
+    color: red;
+}

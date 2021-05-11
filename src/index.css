@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-primary: black;
+    --color-secundary: pink;
+    --font-size: 1rem;
+    --font-color: black;
+    --font-family: 'Raleway', sans-serif;
+
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: var(--font-family);
+    padding: 1rem;
+}
+h2 {
+    font-family: var(--font-family);
+    padding: 1rem;
+}
+
+
+
+button {
+    font-family: var(--font-family);
+    background-color: #e3cf9c;
+}

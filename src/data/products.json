@@ -1,47 +1,65 @@
 [
-  { "name": "one" ,
+  {
+    "id": 1,
+    "name": "one",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   },
-  { "name": "two",
+  {
+    "id": 2,
+    "name": "two",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   },
-  { "name": "three" ,
+  {
+    "id": 3,
+    "name": "three",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   },
-  { "name": "four" ,
+  {
+    "id": 4,
+    "name": "four",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   },
-  { "name": "five",
+  {
+    "id": 5,
+    "name": "five",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   },
-  { "name": "six" ,
+  {
+    "id": 6,
+    "name": "six",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   },
-  { "name": "seven" ,
+  {
+    "id": 8,
+    "name": "seven",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   },
-  { "name": "eight" ,
+  {
+    "id": 9,
+    "name": "eight",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   },
-  { "name": "nine" ,
+  {
+    "id": 10,
+    "name": "nine",
     "description": "handmade",
-    "price": "€ 5",
+    "price": 5,
     "imageUrl": "url"
   }
 ]

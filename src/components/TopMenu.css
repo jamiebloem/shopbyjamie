@@ -1,62 +1,50 @@
-.nav-buttons {
+.topmenu__header {
     /*HIER KOMT HET LOGO EN PROFILE, WINKELWAGEN BUTTON*/
-    height: 80px;
     border: solid grey 1px;
-    margin: 0;
     width: 100vw;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.logo {
-    padding: 0;
-    margin: 0;
+.topmenu__logo {
+    width: 30%;
+    height: auto;
 }
 
-.menu-items ul {
+.topmenu__navigation-link {
+    color: white;
+}
+
+.topmenu__navigation-link:visited {
+    color: white;
+}
+
+
+.topmenu__navigation ul {
     background-color: black;
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
     color: white;
     height: 30px;
-    margin: 0;
-    font-family: var(--font-text);
-
+    font-family: var(--font-family);
 }
 
-.active-link {
-    color: inherit;
-    text-decoration: inherit;
-}
 
-/*NavLink {*/
-
-/*    text-decoration:none;*/
-/*}*/
-
-
-.nav-line {
-    background-color: lightpink;
+.topmenu__sub-header {
+    background-color: #e3cf9c;
     display: flex;
     justify-content: center;
     font-style: italic;
     height: 30px;
-    font-family: var(--font-text);
+    font-family: var(--font-family);
 }
 
-/*.active-link {*/
-/*    border-bottom: 2px solid white;*/
-/*    font-color: white;*/
-/*}*/
-
-/*ul {*/
-/*    list-style-type: none;*/
-/*    display: flex;*/
-/*    justify-content: space-evenly;*/
-/*}*/
-
-/*nav {*/
-/*    background-color: hsl(50, 100%, 50%);*/
-/*    height: 75px;*/
-/*}*/
+.cart__button__badge {
+    background-color: red;
+    border: none;
+    color: white;
+    width: 1.5rem;
+}

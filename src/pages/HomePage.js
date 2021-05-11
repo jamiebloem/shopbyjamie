@@ -5,7 +5,7 @@ function HomePage() {
 
 
     return (
-        <h1>Welkom op de homepagina van Het Kralen Meisje</h1>
+        <h1>Welcome</h1>
     )
 };
 

@@ -4,18 +4,15 @@ import './ProductList.css';
 import Product from "./Product";
 
 
-function ProductList() {
+function ProductList(props) {
+    const { product, onAdd } = props;
     return (
         <>
             <h1>Producten</h1>
-            <div className="product__container">
-            <div className="product">
-                <ul>
+            <div className="product-list">
                     {products.map((product, index) => {
-                        return <Product product={product}/>
+                        return <Product product={product} onAdd={onAdd}/>
                     })};
-                </ul>
-            </div>
             </div>
         </>
     )

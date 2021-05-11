@@ -1,0 +1,28 @@
+.cart__display-products {
+    font-family: var(--font-family);
+    margin: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.cart__button__add {
+    background-color: green;
+    width: 3rem;
+}
+
+.cart__button__remove {
+    background-color: red;
+    width: 3rem;
+}
+
+
+
+.cart__row{
+    font-family: var(--font-family);
+    margin: 2rem;
+    padding: 2rem;
+
+}

@@ -1,0 +1,26 @@
+.product__container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-family: var(--font-family);
+}
+
+.product {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    padding: 1rem;
+}
+
+.product__image {
+    width: 100%;
+}
+
+.product__button {
+    width: 100%;
+    cursor: pointer;
+}
+
