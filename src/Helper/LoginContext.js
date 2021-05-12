@@ -5,7 +5,6 @@ import app from '../module/Firebase';
 export const LoginContext = createContext({});
 
 function LoginContextComponent(props) {
-    console.log(props)
     const [user, setUser] = useState(null);
 
 

@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ShoppingCartContextComponent from "./Helper/ShoppingCartContext";
 
 ReactDOM.render(
   <React.StrictMode>
+  <ShoppingCartContextComponent>
     <App />
+  </ShoppingCartContextComponent>
   </React.StrictMode>,
   document.getElementById('root')
 );

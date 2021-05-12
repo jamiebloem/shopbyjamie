@@ -1,9 +1,11 @@
 import {NavLink} from 'react-router-dom'
 import './TopMenu.css';
 import Logo from '../assets/logo.png'
+import {useCart} from "../Helper/ShoppingCartContext";
 
 function TopMenu(props) {
-    const { countCartItems } = props;
+    const {cartItems, setCartItems} = useCart();
+
     return (
         <nav>
             <div className="topmenu__header">
@@ -20,8 +22,8 @@ function TopMenu(props) {
                     </li>
                     <li>
                         <NavLink to="/shopping-cart" activeClassName="active-link" className="topmenu__navigation-link">Shopping Cart{ ' '}
-                            {countCartItems ? (
-                                <button className="cart__button__badge">{countCartItems}</button>)
+                            {cartItems.length ? (
+                                <button className="cart__button__badge">{cartItems.length}</button>)
                                 : ('')
                             }</NavLink>
                     </li>

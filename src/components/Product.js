@@ -1,8 +1,9 @@
 import './Product.css';
+import {useCart} from "../Helper/ShoppingCartContext";
 
 const Product = (props) => {
-
-    const { product, onAdd } = props;
+    const {onAdd} = useCart();
+    const { product} = props;
 
     return (
         <div className="product__container">
