@@ -1,6 +1,10 @@
 import './ShoppingCart.css'
 import { useHistory } from 'react-router-dom';
+import {useAuth} from "../Helper/LoginContext";
+
 function ShoppingCart(props) {
+    const {user, setUser} = useAuth();
+    console.log(user)
     const {cartItems, onAdd, onRemove} = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
     const shippingPrice = itemsPrice > 30 ? 0 : 5.95;

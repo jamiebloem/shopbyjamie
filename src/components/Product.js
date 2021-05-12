@@ -1,6 +1,7 @@
 import './Product.css';
 
 const Product = (props) => {
+
     const { product, onAdd } = props;
 
     return (

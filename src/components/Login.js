@@ -1,14 +1,18 @@
 import {useForm} from 'react-hook-form';
 import './Login.css'
 import app from '../module/Firebase'
+import {useAuth} from "../Helper/LoginContext";
+
 
 
 function Login() {
     const {register, handleSubmit, formState: {errors}} = useForm();
+    const {user, setUser} = useAuth();
+
         const loginHandler = async (data) => {
         try {
             const loginUser = await app.auth().signInWithEmailAndPassword(data.email, data.password)
-            return loginUser
+            setUser(loginUser.user)
             console.log('data', loginUser)
         } catch (e) {
             console.error(errors)

@@ -12,6 +12,7 @@ import SignIn from "./pages/SignIn";
 import products from "./data/products.json";
 import {useState} from 'react';
 import ShoppingCart from "./pages/ShoppingCart";
+import LoginContextComponent from './Helper/LoginContext.js'
 
 function App() {
     const {product} = products;
@@ -52,6 +53,7 @@ function App() {
 
     return (
         <>
+        <LoginContextComponent>
             <Router>
                 <TopMenu countCartItems={cartItems.length}/>
                 <Switch>
@@ -72,6 +74,7 @@ function App() {
                     </Route>
                 </Switch>
             </Router>
+        </LoginContextComponent>
         </>
 
 
