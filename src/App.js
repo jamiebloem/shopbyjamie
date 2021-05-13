@@ -11,6 +11,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import SignIn from "./pages/SignIn";
 import ShoppingCart from "./pages/ShoppingCart";
 import LoginContextComponent from './Helper/LoginContext.js'
+import { db } from './module/Firebase.js';
 
 function App() {
 

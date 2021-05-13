@@ -2,14 +2,12 @@ import './ShoppingCart.css'
 import { useHistory } from 'react-router-dom';
 import {useAuth} from "../Helper/LoginContext";
 import {useCart} from "../Helper/ShoppingCartContext";
+import { db } from './module/Firebase.js';
 
 function ShoppingCart(props) {
     const {user, setUser} = useAuth();
-    const {cartItems, setCartItems, onAdd, onRemove} = useCart();
+    const {cartItems, setCartItems, onAdd, onRemove, totalPrice, itemsPrice, shippingPrice} = useCart();
 
-    const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-    const shippingPrice = itemsPrice > 30 ? 0 : 5.95;
-    const totalPrice = itemsPrice + shippingPrice;
 
     const history = useHistory();
     function handleClick() {

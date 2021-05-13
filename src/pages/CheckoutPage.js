@@ -1,10 +1,16 @@
 import './CheckoutPage.css'
 import {useForm} from 'react-hook-form';
 import {useState} from 'react';
+import {useCart} from "../Helper/ShoppingCartContext";
+
 
 function CheckoutPage() {
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
-    const onSubmit = data => console.log(data);
+    const {cartItems, setCartItems, totalPrice, itemsPrice, shippingPrice} = useCart();
+    const onSubmit = data => { console.log(data)
+   // send things to firebase here
+    }
+
     const watchBillingAddress = watch("billingAddress", false);
 
     console.log(errors)
@@ -12,6 +18,20 @@ function CheckoutPage() {
     return (
         <>
             <h1>Check Out</h1>
+
+            <div className="cart__row">
+                <div>Items Price</div>
+                <div className="cart__row_right">€{itemsPrice.toFixed(2)}</div>
+            </div>
+            <div className="cart__row">
+                <div>Shipping Price</div>
+                <div className="cart__row_right">€{shippingPrice.toFixed(2)}</div>
+            </div>
+            <div className="cart__row">
+                <div><strong>Total Price</strong></div>
+                <div className="cart__row_right"><strong>€{totalPrice.toFixed(2)}</strong></div>
+            </div>
+
             <h2>Delivery Address</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label htmlFor="email">E-mail address

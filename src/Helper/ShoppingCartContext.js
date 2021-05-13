@@ -6,6 +6,9 @@ export const ShoppingCartContext = createContext({});
 
 function ShoppingCartContextComponent(props) {
     const [cartItems, setCartItems] = useState([]);
+    const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
+    const shippingPrice = itemsPrice > 30 ? 0 : 5.95;
+    const totalPrice = itemsPrice + shippingPrice;
 
     const onAdd = (product) => {
         console.log("PRODUCT", product)
@@ -46,7 +49,7 @@ function ShoppingCartContextComponent(props) {
 
     return (
         <ShoppingCartContext.Provider value={{
-            cartItems: cartItems, setCartItems: setCartItems, onAdd: onAdd, onRemove: onRemove
+            cartItems: cartItems, setCartItems: setCartItems, onAdd: onAdd, onRemove: onRemove, totalPrice: totalPrice, itemsPrice: itemsPrice, shippingPrice: shippingPrice
         }}>{props.children}</ShoppingCartContext.Provider>
     )
 
