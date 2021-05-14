@@ -43,8 +43,8 @@
 }
 
 .cart__button__badge {
-    background-color: red;
+    background-color: #e3cf9c;
     border: none;
-    color: white;
+    color: black;
     width: 1.5rem;
 }

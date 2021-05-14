@@ -1,7 +1,8 @@
-import {NavLink} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import './TopMenu.css';
 import Logo from '../assets/logo.png'
 import {useCart} from "../Helper/ShoppingCartContext";
+import PrivateLink from "./PrivateLink";
 
 function TopMenu(props) {
     const {cartItems, setCartItems} = useCart();
@@ -32,6 +33,9 @@ function TopMenu(props) {
                     </li>
                     <li>
                         <NavLink to="/sign-in" activeClassName="active-link" className="topmenu__navigation-link">Sign In</NavLink>
+                    </li>
+                    <li>
+                        <PrivateLink to="/order-page" activeClassName="active-link" className="topmenu__navigation-link">Orders</PrivateLink>
                     </li>
                 </ul>
             </div>

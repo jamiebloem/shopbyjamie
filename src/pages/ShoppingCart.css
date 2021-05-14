@@ -9,20 +9,26 @@
 
 
 .cart__button__add {
-    background-color: green;
+    background-color: #e3cf9c;
     width: 3rem;
 }
 
 .cart__button__remove {
-    background-color: red;
+    background-color: #e3cf9c;;
     width: 3rem;
 }
 
-
+.cart__price {
+    display: flex;
+    font-family: var(--font-family);
+    justify-content: space-between;
+    width: 15rem;
+}
 
 .cart__row{
     font-family: var(--font-family);
-    margin: 2rem;
-    padding: 2rem;
+    display: flex;
+    /*margin: 2rem;*/
+    /*padding: 2rem;*/
 
 }

@@ -10,8 +10,10 @@ import TopMenu from "./components/TopMenu"
 import CheckoutPage from "./pages/CheckoutPage";
 import SignIn from "./pages/SignIn";
 import ShoppingCart from "./pages/ShoppingCart";
+import OrderPage from "./pages/OrderPage";
 import LoginContextComponent from './Helper/LoginContext.js'
 import { db } from './module/Firebase.js';
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
 
@@ -37,6 +39,9 @@ function App() {
                             <Route path="/sign-in">
                                 <SignIn/>
                             </Route>
+                            <PrivateRoute path="/order-page">
+                                <OrderPage/>
+                            </PrivateRoute>
                         </Switch>
                     </Router>
                 </LoginContextComponent>

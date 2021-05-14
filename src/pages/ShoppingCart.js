@@ -1,13 +1,12 @@
 import './ShoppingCart.css'
 import { useHistory } from 'react-router-dom';
-import {useAuth} from "../Helper/LoginContext";
-import {useCart} from "../Helper/ShoppingCartContext";
-import { db } from './module/Firebase.js';
+import { useAuth } from "../Helper/LoginContext";
+import { useCart } from "../Helper/ShoppingCartContext";
+
 
 function ShoppingCart(props) {
     const {user, setUser} = useAuth();
     const {cartItems, setCartItems, onAdd, onRemove, totalPrice, itemsPrice, shippingPrice} = useCart();
-
 
     const history = useHistory();
     function handleClick() {
@@ -38,15 +37,15 @@ function ShoppingCart(props) {
             {cartItems.length !== 0 && (
                 <>
                     <hr></hr>
-                    <div className="cart__row">
+                    <div className="cart__price">
                         <div>Items Price</div>
                         <div className="cart__row_right">€{itemsPrice.toFixed(2)}</div>
                     </div>
-                    <div className="cart__row">
+                    <div className="cart__price">
                         <div>Shipping Price</div>
                         <div className="cart__row_right">€{shippingPrice.toFixed(2)}</div>
                     </div>
-                    <div className="cart__row">
+                    <div className="cart__price">
                         <div><strong>Total Price</strong></div>
                         <div className="cart__row_right"><strong>€{totalPrice.toFixed(2)}</strong></div>
                     </div>

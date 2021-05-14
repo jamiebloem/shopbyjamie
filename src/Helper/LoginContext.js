@@ -1,4 +1,4 @@
-import {createContext, useState, useContext} from 'react'
+import {createContext, useState, useContext, useEffect} from 'react'
 import app from '../module/Firebase';
 
 
@@ -6,6 +6,21 @@ export const LoginContext = createContext({});
 
 function LoginContextComponent(props) {
     const [user, setUser] = useState(null);
+
+    useEffect( () => {
+        app.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                setUser(user);
+                // User is signed in.
+            } else {
+                console.log('nope')
+                // No user is signed in.
+            }
+        });
+
+    }, [])
+
+
 
 
     return (

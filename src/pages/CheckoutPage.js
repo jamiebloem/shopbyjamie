@@ -1,14 +1,33 @@
 import './CheckoutPage.css'
-import {useForm} from 'react-hook-form';
+import {set, useForm} from 'react-hook-form';
 import {useState} from 'react';
 import {useCart} from "../Helper/ShoppingCartContext";
-
+import app from '../module/Firebase.js';
+const db = app.firestore();
 
 function CheckoutPage() {
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
     const {cartItems, setCartItems, totalPrice, itemsPrice, shippingPrice} = useCart();
-    const onSubmit = data => { console.log(data)
-   // send things to firebase here
+
+
+    const onSubmit = data => {
+        console.log(data)
+        db.collection('orders').add({
+            shippingInfo: data,
+            order: cartItems,
+            totalPrice: totalPrice,
+            itemsPrice: itemsPrice,
+            shippingPrice: shippingPrice,
+            paid: false,
+            shipped: false
+        })
+            .then(() => {
+                alert('Your order is completed')
+            })
+            .catch(error => {
+                alert(error.message)
+            })
+
     }
 
     const watchBillingAddress = watch("billingAddress", false);
@@ -37,6 +56,8 @@ function CheckoutPage() {
                 <label htmlFor="email">E-mail address
                     <input type="email"
                            name="email"
+                           // value={email}
+                           // onChange={(e) => setEmail(e.target.value)}
                            id="email"
                            {...register('email', {
                                required: true,
@@ -46,11 +67,13 @@ function CheckoutPage() {
                                }
                            })}
                     />
-                    {errors.email && <p>{errors.email.message}</p>}
+                    {errors.email && <p className="error"> {errors.email.message}</p>}
                 </label>
                 <label htmlFor="firstName">First name
                     <input type="text"
                            name="firstName"
+                           // value={firstName}
+                           // onChange={(e) => setFirstName(e.target.value)}
                            id="firstName"
                            {...register('firstName', {
                                required: {value: true, message: "This field is required"},
@@ -68,7 +91,7 @@ function CheckoutPage() {
                                maxLength: {value: 20, message: "Your last name is too long"}
                            })}
                     />
-                    {errors.lastName && <p>{errors.lastName.message}</p>}
+                    {errors.lastName && <p className="error">{errors.lastName.message}</p>}
                 </label>
                 <label htmlFor="phoneNumber">Phone number
                     <input type="text"
@@ -90,7 +113,7 @@ function CheckoutPage() {
                                }
                            })}
                     />
-                    {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
+                    {errors.phoneNumber && <p className="error">{errors.phoneNumber.message}</p>}
                 </label>
 
                 <p><strong>Fill in your delivery address</strong></p>
@@ -114,7 +137,7 @@ function CheckoutPage() {
                                }
                            })}
                     />
-                    {errors.postalCode && <p>{errors.postalCode.message}</p>}
+                    {errors.postalCode && <p className="error">{errors.postalCode.message}</p>}
                 </label>
                 <label htmlFor="houseNumber">House number
                     <input type="text"
@@ -124,12 +147,12 @@ function CheckoutPage() {
                                required: true,
                                message: "This field is required",
                                pattern: {
-                                   value: /(?!0)\d[0-3]{0,2}[a-zA-Z]?\/(?!0)\d[0-9]{0,1}/,
+                                   // value: /(?!0)\d[0-3]{0,2}[a-zA-Z]?\/(?!0)\d[0-9]{0,1}/,
                                    message: "Please enter a house number"
                                }
                            })}
                     />
-                    {errors.houseNumber && <p>{errors.houseNumber.message}</p>}
+                    {errors.houseNumber && <p className="error">{errors.houseNumber.message}</p>}
                 </label>
                 <label htmlFor="streetName">Street name
                     <input type="text"
@@ -137,7 +160,7 @@ function CheckoutPage() {
                            id="streetName"
                            {...register('streetName', {required: true, message: "Please enter a street name"})}
                     />
-                    {errors.streetName && <p>{errors.streetName.message}</p>}
+                    {errors.streetName && <p className="error">{errors.streetName.message}</p>}
                 </label>
                 <label htmlFor="cityName">City
                     <input type="text"
@@ -145,7 +168,7 @@ function CheckoutPage() {
                            id="cityName"
                            {...register('city', {required: true, message: "Please enter a city name"})}
                     />
-                    {errors.cityName && <p>{errors.cityName.message}</p>}
+                    {errors.cityName && <p className="error">{errors.cityName.message}</p>}
                 </label>
             <h3>Billing address</h3>
             <label htmlFor="checkbox">Same as Delivery address
@@ -176,7 +199,7 @@ function CheckoutPage() {
                                        }
                                    })}
                             />
-                            {errors.postalCode && <p>{errors.postalCode.message}</p>}
+                            {errors.postalCode && <p className="error">{errors.postalCode.message}</p>}
                         </label>
                         <label htmlFor="billingHouseNumber">House number
                             <input type="text"
@@ -191,7 +214,7 @@ function CheckoutPage() {
                                        }
                                    })}
                             />
-                            {errors.houseNumber && <p>{errors.houseNumber.message}</p>}
+                            {errors.houseNumber && <p className="error">{errors.houseNumber.message}</p>}
                         </label>
                         <label htmlFor="billingStreetName">Street name
                             <input type="text"
@@ -199,7 +222,7 @@ function CheckoutPage() {
                                    id="billingStreetName"
                                    {...register('billingStreetName', {required: true, message: "Please enter a street name"})}
                             />
-                            {errors.streetName && <p>{errors.streetName.message}</p>}
+                            {errors.streetName && <p className="error">{errors.streetName.message}</p>}
                         </label>
                         <label htmlFor="billingCityName">City
                             <input type="text"
@@ -207,7 +230,7 @@ function CheckoutPage() {
                                    id="billingCityName"
                                    {...register('billingCityName', {required: true, message: "Please enter a city name"})}
                             />
-                            {errors.cityName && <p>{errors.cityName.message}</p>}
+                            {errors.cityName && <p className="error">{errors.cityName.message}</p>}
                         </label>
                     </>
 
