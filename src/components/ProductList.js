@@ -8,11 +8,11 @@ function ProductList() {
 
     return (
         <>
-            <h1>Producten</h1>
+            <h1>Products</h1>
             <div className="product-list">
                     {products.map((product, index) => {
                         return <Product product={product} />
-                    })};
+                    })}
             </div>
         </>
     )

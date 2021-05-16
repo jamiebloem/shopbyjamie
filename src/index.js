@@ -6,12 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import ShoppingCartContextComponent from "./Helper/ShoppingCartContext";
 
 ReactDOM.render(
-  <React.StrictMode>
-  <ShoppingCartContextComponent>
-    <App />
-  </ShoppingCartContextComponent>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <ShoppingCartContextComponent>
+            <App/>
+        </ShoppingCartContextComponent>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
