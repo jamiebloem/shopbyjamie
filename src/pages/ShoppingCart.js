@@ -21,7 +21,7 @@ function ShoppingCart(props) {
             </div>
             {cartItems.map((item) => (
                 <div key={item.id} className="cart__row">
-                    <div className="cart__row">{item.name}</div>
+                    <div>Item: {item.name}</div>
                     <div>
                         <button onClick={() => onAdd(item)} className="cart__button__add">+</button>
                     </div>

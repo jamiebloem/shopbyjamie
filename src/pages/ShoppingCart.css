@@ -7,34 +7,33 @@
 
 }
 
-.cart__button__add {
-    background-color: #beb2e0;
-    width: 3rem;
-}
-
-.cart__button__remove {
-    background-color: #beb2c3;
-    width: 3rem;
-}
 
 .cart__price {
     display: flex;
     font-family: var(--font-family);
     justify-content: space-between;
     width: 15rem;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .cart__row {
     font-family: var(--font-family);
     display: flex;
+    width: 50rem;
 }
 
-.cart__row__checkout {
+.cart__button__checkout {
     font-family: var(--font-family);
     display: flex;
     background-color: #beb2e0;
-    /*margin: 2rem;*/
-    /*padding: 2rem;*/
+    margin: 1rem;
+    padding: 1rem;
 
+
+}
+
+hr {
+    width: 50rem;
 }
 

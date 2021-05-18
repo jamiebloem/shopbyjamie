@@ -149,10 +149,6 @@ function CheckoutPage() {
                                {...register('houseNumber', {
                                    required: true,
                                    message: "This field is required",
-                                   pattern: {
-                                       value: /(?!0)\d[0-3]{0,2}[a-zA-Z]?\/(?!0)\d[0-9]{0,1}/,
-                                       message: "Please enter a house number"
-                                   }
                                })}
                         />
                         {errors.houseNumber && <p className="error">{errors.houseNumber.message}</p>}
