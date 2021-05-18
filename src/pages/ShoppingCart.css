@@ -7,14 +7,13 @@
 
 }
 
-
 .cart__button__add {
-    background-color: #e3cf9c;
+    background-color: #beb2e0;
     width: 3rem;
 }
 
 .cart__button__remove {
-    background-color: #e3cf9c;;
+    background-color: #beb2c3;
     width: 3rem;
 }
 
@@ -25,10 +24,17 @@
     width: 15rem;
 }
 
-.cart__row{
+.cart__row {
     font-family: var(--font-family);
     display: flex;
+}
+
+.cart__row__checkout {
+    font-family: var(--font-family);
+    display: flex;
+    background-color: #beb2e0;
     /*margin: 2rem;*/
     /*padding: 2rem;*/
 
 }
+

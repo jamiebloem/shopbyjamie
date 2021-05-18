@@ -1,65 +1,65 @@
 [
   {
     "id": 1,
-    "name": "one",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
+    "name": "Pink Hearted",
+    "description": "Handmade earrings",
+    "price": 12.95,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/1.jpg?alt=media&token=e32466e4-4cfa-4e58-83ed-230d18cc526f"
   },
   {
     "id": 2,
-    "name": "two",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
+    "name": "Double Love",
+    "description": "Handmade earrings set",
+    "price": 17.95,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/2.jpg?alt=media&token=86c18251-7135-478e-a8fb-9edfb159146c"
   },
   {
     "id": 3,
-    "name": "three",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
+    "name": "Colourful Neckless",
+    "description": "Handmade neckless",
+    "price": 12.95,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/3.jpg?alt=media&token=a4555490-3795-4d36-92e1-c90764d482f6"
   },
   {
     "id": 4,
-    "name": "four",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
+    "name": "Mix & Match Earrings",
+    "description": "All kind of earrings handmade",
+    "price": 35,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/4.jpg?alt=media&token=89d0e92a-a7a1-424c-bd26-73b980dc05d4"
   },
   {
     "id": 5,
-    "name": "five",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
+    "name": "Happy Bracelet",
+    "description": "Set of handmade bracelets",
+    "price": 19.95,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/5.jpg?alt=media&token=2bfa3090-f76f-464c-82d3-f0d35e75f83f"
   },
   {
     "id": 6,
-    "name": "six",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
+    "name": "Happy chords",
+    "description": "Handmade chords for your sunglasses",
+    "price": 17.95,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/6.jpg?alt=media&token=1189dd6c-8298-4d4d-ad7e-c1dbf4b96e1c"
+  },
+  {
+    "id": 7,
+    "name": "Love Bracelets",
+    "description": "Handmade bracelets set",
+    "price": 15,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/7.jpg?alt=media&token=d6c7ad58-e7e0-4e6b-92b0-d9c13213979b"
   },
   {
     "id": 8,
-    "name": "seven",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
+    "name": "Lover Bracelet",
+    "description": "Gold bracelet with heart and letter",
+    "price": 17.95,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/8.jpg?alt=media&token=8a46f050-2b96-4968-882e-27ef5a074beb"
   },
   {
     "id": 9,
-    "name": "eight",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
-  },
-  {
-    "id": 10,
-    "name": "nine",
-    "description": "handmade",
-    "price": 5,
-    "imageUrl": "url"
+    "name": "Colourful hearted earrings",
+    "description": "Handmade earrings",
+    "price": 19.95,
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/shopbyjamie-f655d.appspot.com/o/9.jpg?alt=media&token=8e734a26-d597-4c21-b80a-aa8ae6649fe3"
   }
 ]

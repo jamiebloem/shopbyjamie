@@ -10,17 +10,18 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     color: black;
     padding: 1rem;
 }
 
 .product__image {
-    width: 100%;
+    width: 20rem;
 }
 
 .product__button {
-    width: 100%;
+    background-color: #beb2c3;
+    width: 20rem;
     cursor: pointer;
 }
 

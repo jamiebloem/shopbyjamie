@@ -1,0 +1,36 @@
+.shipping__info {
+    font-family: var(--font-family);
+
+}
+
+.order__summary{
+    font-family: var(--font-family);
+    width: 50rem;
+}
+
+th, tr {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+td {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+
+
+.paid__shipment__checkbox {
+    font-family: var(--font-family);
+    margin: 2rem;
+    padding: 2rem;
+}
+
+label {
+    width: 30rem;
+}
+
+p {
+    padding: 0.5rem
+}

@@ -34,7 +34,7 @@
 
 
 .topmenu__sub-header {
-    background-color: #e3cf9c;
+    background-color: #beb2e0;
     display: flex;
     justify-content: center;
     font-style: italic;
@@ -43,7 +43,7 @@
 }
 
 .cart__button__badge {
-    background-color: #e3cf9c;
+    background-color: #beb2e0;
     border: none;
     color: black;
     width: 1.5rem;

@@ -50,7 +50,7 @@ function ShoppingCart(props) {
                         <div className="cart__row_right"><strong>€{totalPrice.toFixed(2)}</strong></div>
                     </div>
                     <hr></hr>
-                    <button className="cart__row" onClick={handleClick}>
+                    <button className="cart__button__checkout" onClick={handleClick}>
                         CHECKOUT
                     </button>
                 </>
