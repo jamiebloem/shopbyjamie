@@ -1,7 +1,8 @@
 import './ShoppingCart.css'
-import { useHistory } from 'react-router-dom';
-import { useAuth } from "../Helper/LoginContext";
-import { useCart } from "../Helper/ShoppingCartContext";
+import {useHistory} from 'react-router-dom';
+import {useAuth} from "../Helper/LoginContext";
+import {useCart} from "../Helper/ShoppingCartContext";
+import {RiAddBoxLine, RiSubtractLine} from 'react-icons/ri'
 
 
 function ShoppingCart(props) {
@@ -9,6 +10,7 @@ function ShoppingCart(props) {
     const {cartItems, setCartItems, onAdd, onRemove, totalPrice, itemsPrice, shippingPrice} = useCart();
 
     const history = useHistory();
+
     function handleClick() {
         history.push("/check-out")
     }
@@ -22,16 +24,14 @@ function ShoppingCart(props) {
             {cartItems.map((item) => (
                 <div key={item.id} className="cart__row">
                     <div>Item: {item.name}</div>
-                    <div>
-                        <button onClick={() => onAdd(item)} className="cart__button__add">+</button>
-                    </div>
-                    <div>
-                        <button onClick={() => onRemove(item)} className="cart__button__remove">-</button>
-                    </div>
-
                     <div className="cart__text-right">
                         {item.qty} x €{item.price.toFixed(2)}
                     </div>
+                    <div className="cart__buttons">
+                        <button onClick={() => onAdd(item)} className="cart__button__add"><RiAddBoxLine/></button>
+                        <button onClick={() => onRemove(item)} className="cart__button__remove"><RiSubtractLine/></button>
+                    </div>
+
                 </div>
             ))}
             {cartItems.length !== 0 && (

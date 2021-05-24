@@ -7,6 +7,7 @@ const db = app.firestore();
 
 
 const OrderPage = () => {
+    const [expanded, setExpanded] = useState(false)
     const {user} = useAuth();
     const [orders, setOrders] = useState();
 
@@ -67,34 +68,37 @@ const OrderPage = () => {
                                                       onChange={(e) => confirmedPaid(e, order.id)}/></label>
                     <label htmlFor="shipped">Shipped:<input type="checkbox" checked={order.shipped}
                                                             onChange={(e) => confirmedShipped(e, order.id)}/></label>
-                    <div className="shipping__info">
-                        <h3>Address</h3>
+                    <button className="expand__button" onClick={() => setExpanded(!expanded)}>+</button>
+                    {expanded && <>
+                        <div className="shipping__info">
+                            <h3>Address</h3>
 
-                        <p>{order.shippingInfo.streetName} {order.shippingInfo.houseNumber}</p>
-                        <p>{order.shippingInfo.postalCode} {order.shippingInfo.city}</p>
+                            <p>{order.shippingInfo.streetName} {order.shippingInfo.houseNumber}</p>
+                            <p>{order.shippingInfo.postalCode} {order.shippingInfo.city}</p>
 
-                        <h3>Contact</h3>
-                        <p>{order.shippingInfo.firstName} {order.shippingInfo.lastName}</p>
-                        <p>{order.shippingInfo.phoneNumber}</p>
-                        <p>{order.shippingInfo.email}</p>
-                    </div>
-                    <h3>Order Summary</h3>
-                    <table className="order__summary">
-                        <tr>
-                            <th>Product ID</th>
-                            <th>Product name</th>
-                            <th>Product qty</th>
-                            <th>Product price</th>
-                        </tr>
-                        {order.order.map(product => {
-                            return <tr>
-                                <td>{product.id}</td>
-                                <td>{product.name}</td>
-                                <td>{product.qty}</td>
-                                <td>{product.price}</td>
+                            <h3>Contact</h3>
+                            <p>{order.shippingInfo.firstName} {order.shippingInfo.lastName}</p>
+                            <p>{order.shippingInfo.phoneNumber}</p>
+                            <p>{order.shippingInfo.email}</p>
+                        </div>
+                        <h3>Order Summary</h3>
+                        <table className="order__summary">
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Product name</th>
+                                <th>Product qty</th>
+                                <th>Product price</th>
                             </tr>
-                        })}
-                    </table>
+                            {order.order.map(product => {
+                                return <tr>
+                                    <td>{product.id}</td>
+                                    <td>{product.name}</td>
+                                    <td>{product.qty}</td>
+                                    <td>{product.price}</td>
+                                </tr>
+                            })}
+                        </table>
+                    </>}
                 </div>
             })}
         </div>

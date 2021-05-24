@@ -1,7 +1,13 @@
-.product-list {
+.product__list {
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
+    max-width: 1200px;
     justify-content: space-evenly;
 }
 
+.product__page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

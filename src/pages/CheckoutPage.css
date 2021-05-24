@@ -3,9 +3,11 @@
     display: flex;
     justify-content: space-between;
     width: 29rem;
-
 }
 
+.cart__row_right {
+    width: 23rem;
+}
 
 form {
     display: flex;
@@ -15,8 +17,6 @@ form {
     font-family: var(--font-family);
     width: 30rem;
 }
-
-
 
 input {
     width: 15rem;
@@ -28,7 +28,7 @@ input {
 
 label {
     margin: 0.5rem;
-    /*width: 30rem;*/
+    width: 30rem;
     display: flex;
     justify-content: space-between;
 }
@@ -40,4 +40,14 @@ h1, h2, h3 {
 
 .error {
     color: red;
+}
+
+button {
+    margin: 0.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+#checkbox {
+
 }

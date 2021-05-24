@@ -8,7 +8,7 @@ const Product = (props) => {
 
     return (
         <div className="product__container">
-            <img className="product__image" src={product.imageUrl}/>
+            <img className="product__image" src={product.imageUrl} onClick={() => onAdd(product)}/>
             <p>{product.name}</p>
             <p>{product.description}</p>
             <p>€{product.price.toFixed(2)}</p>

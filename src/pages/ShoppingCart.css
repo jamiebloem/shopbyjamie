@@ -7,7 +7,6 @@
 
 }
 
-
 .cart__price {
     display: flex;
     font-family: var(--font-family);
@@ -20,6 +19,7 @@
 .cart__row {
     font-family: var(--font-family);
     display: flex;
+    flex-direction: column;
     width: 50rem;
 }
 
@@ -29,7 +29,14 @@
     background-color: #beb2e0;
     margin: 1rem;
     padding: 1rem;
-
-
 }
 
+.cart__buttons {
+    display: flex;
+    width: 10rem;
+}
+
+.cart__button__add, .cart__button__remove {
+    width: 3rem;
+    font-size: 2em;
+}

@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ShoppingCartContextComponent from "./Helper/ShoppingCartContext";
+import LoginContextComponent from "./Helper/LoginContext";
 
 ReactDOM.render(
     <React.StrictMode>
+        <LoginContextComponent>
         <ShoppingCartContextComponent>
             <App/>
         </ShoppingCartContextComponent>
+        </LoginContextComponent>
     </React.StrictMode>,
     document.getElementById('root')
 );

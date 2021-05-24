@@ -6,7 +6,6 @@
 }
 
 .product {
-    width: 100vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -17,6 +16,7 @@
 
 .product__image {
     width: 20rem;
+    cursor: pointer;
 }
 
 .product__button {

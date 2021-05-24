@@ -3,12 +3,14 @@ import {set, useForm} from 'react-hook-form';
 import {useState} from 'react';
 import {useCart} from "../Helper/ShoppingCartContext";
 import app from '../module/Firebase.js';
+import ShoppingCart from "./ShoppingCart";
 
 const db = app.firestore();
 
 function CheckoutPage() {
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
     const {cartItems, setCartItems, totalPrice, itemsPrice, shippingPrice} = useCart();
+    const [succes, setSucces] = useState(false);
 
 
     const onSubmit = data => {
@@ -23,7 +25,7 @@ function CheckoutPage() {
             shipped: false
         })
             .then(() => {
-                alert('Your order is completed')
+                setSucces(true)
             })
             .catch(error => {
                 alert(error.message)
@@ -38,7 +40,8 @@ function CheckoutPage() {
     return (
         <>
             <h1>Check Out</h1>
-
+            {succes ? <h3>Your order is completed</h3> :
+                <>
             <div className="cart__row">
                 <div>Items Price</div>
                 <div className="cart__row_right">€{itemsPrice.toFixed(2)}</div>
@@ -52,10 +55,11 @@ function CheckoutPage() {
                 <div className="cart__row_right"><strong>€{totalPrice.toFixed(2)}</strong></div>
             </div>
 
-            <h2>Delivery Address</h2>
+
 
             <div className="cart__form">
-                <form onSubmit={handleSubmit(onSubmit)}>
+
+                    <form onSubmit={handleSubmit(onSubmit)}>
                     <label htmlFor="email">Email address
                         <input type="email"
                                name="email"
@@ -173,6 +177,7 @@ function CheckoutPage() {
                     <label htmlFor="checkbox">Same as Delivery address
                         <input type="checkbox"
                                name="checkbox"
+                               id="checkbox"
                                {...register("billingAddress")}
                         />
                     </label>
@@ -240,14 +245,15 @@ function CheckoutPage() {
                         </>
 
                     )
-
                     }
 
-                    <button onChange={onSubmit}>Confirm order</button>
+                    <button onChange={onSubmit} onClick={() => setSucces(!succes)}>Confirm order</button>
+
 
                 </form>
-            </div>
-        </>
+
+            </div>  </> }
+                </>
     )
 };
 

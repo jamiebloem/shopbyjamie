@@ -34,3 +34,7 @@ label {
 p {
     padding: 0.5rem
 }
+
+.expand__button {
+    width: 23rem;
+}

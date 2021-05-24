@@ -13,8 +13,7 @@ function LoginContextComponent(props) {
                 setUser(user);
                 // User is signed in.
             } else {
-                console.log('nope')
-                // No user is signed in.
+                setUser(null)
             }
         });
 

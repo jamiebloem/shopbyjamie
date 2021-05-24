@@ -3,9 +3,12 @@ import './TopMenu.css';
 import Logo from '../assets/logo.png'
 import {useCart} from "../Helper/ShoppingCartContext";
 import PrivateLink from "./PrivateLink";
+import app from '../module/Firebase';
+import {useAuth} from "../Helper/LoginContext";
 
 function TopMenu(props) {
     const {cartItems, setCartItems} = useCart();
+    const {user} = useAuth();
 
     return (
         <nav>
@@ -32,11 +35,12 @@ function TopMenu(props) {
                         <NavLink to="/check-out" activeClassName="active-link" className="topmenu__navigation-link">Checkout</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/sign-in" activeClassName="active-link" className="topmenu__navigation-link">Sign In</NavLink>
-                    </li>
-                    <li>
                         <PrivateLink to="/order-page" activeClassName="active-link" className="topmenu__navigation-link">Orders</PrivateLink>
                     </li>
+                    {user &&
+                    <li>
+                        <button onClick={() => app.auth().signOut()}>Log out</button>
+                    </li>}
                 </ul>
             </div>
             <div className="topmenu__sub-header">
