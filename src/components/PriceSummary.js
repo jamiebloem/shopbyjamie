@@ -1,7 +1,7 @@
 import {useCart} from "../Helper/ShoppingCartContext";
 
 function PriceSummary() {
-    const {cartItems, setCartItems, onAdd, onRemove, totalPrice, itemsPrice, shippingPrice} = useCart();
+    const {totalPrice, itemsPrice, shippingPrice} = useCart();
 
     return (
         <>
@@ -19,10 +19,8 @@ function PriceSummary() {
                 <div className="cart__row_right"><strong>€{totalPrice.toFixed(2)}</strong></div>
             </div>
             <hr></hr>
-
         </>
     )
-
 }
 
 export default PriceSummary;

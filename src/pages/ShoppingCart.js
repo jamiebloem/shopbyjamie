@@ -1,14 +1,12 @@
 import './ShoppingCart.css'
 import {useHistory} from 'react-router-dom';
-import {useAuth} from "../Helper/LoginContext";
 import {useCart} from "../Helper/ShoppingCartContext";
-import {RiAddBoxLine, RiSubtractLine} from 'react-icons/ri'
 import PriceSummary from "../components/PriceSummary";
+import CartItem from "../components/CartItem";
 
 
-function ShoppingCart(props) {
-    const {user, setUser} = useAuth();
-    const {cartItems, setCartItems, onAdd, onRemove, totalPrice, itemsPrice, shippingPrice} = useCart();
+function ShoppingCart() {
+    const {cartItems} = useCart();
 
     const history = useHistory();
 
@@ -23,24 +21,14 @@ function ShoppingCart(props) {
                 {cartItems.length === 0 && <div className="cart__display-products">Cart is Empty</div>}
             </div>
             {cartItems.map((item) => (
-                <div key={item.id} className="cart__row">
-                    <div>Item: {item.name}</div>
-                    <div className="cart__text-right">
-                        {item.qty} x €{item.price.toFixed(2)}
-                    </div>
-                    <div className="cart__buttons">
-                        <button onClick={() => onAdd(item)} className="cart__button__add"><RiAddBoxLine/></button>
-                        <button onClick={() => onRemove(item)} className="cart__button__remove"><RiSubtractLine/></button>
-                    </div>
-
-                </div>
+                <CartItem item={item} key={item.id}/>
             ))}
             {cartItems.length !== 0 && (
                 <>
-                <PriceSummary/>
-                <button className="cart__button__checkout" onClick={handleClick}>
-                    CHECKOUT
-                </button>
+                    <PriceSummary/>
+                    <button className="cart__button__checkout" onClick={handleClick}>
+                        CHECKOUT
+                    </button>
                 </>
             )}
         </>

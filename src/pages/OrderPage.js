@@ -2,6 +2,9 @@ import {useAuth} from "../Helper/LoginContext";
 import app from '../module/Firebase.js';
 import {useEffect, useState} from "react";
 import './OrderPage.css'
+import OrderDetails from "../components/OrderDetails";
+import ShippingInfo from "../components/ShippingInfo";
+import OrderSummary from "../components/OrderSummary";
 
 const db = app.firestore();
 
@@ -58,52 +61,21 @@ const OrderPage = () => {
 
     return (
 
-        <div>
-            {orders &&
-            orders.map(order => {
-                return <div className="paid__shipment__checkbox">
-                    <h3>Order ID: {order.id}</h3>
-                    <p>Price: € {order.itemsPrice}</p>
-                    <label htmlFor="paid">Paid:<input type="checkbox" checked={order.paid}
-                                                      onChange={(e) => confirmedPaid(e, order.id)}/></label>
-                    <label htmlFor="shipped">Shipped:<input type="checkbox" checked={order.shipped}
-                                                            onChange={(e) => confirmedShipped(e, order.id)}/></label>
-                    <button className="expand__button" onClick={() => setExpanded(!expanded)}>+</button>
-                    {expanded && <>
-                        <div className="shipping__info">
-                            <h3>Address</h3>
+    <div>
+        {orders &&
+        orders.map(order => {
+            return <div className="paid__shipment__checkbox">
+                <OrderSummary confirmedPaid={confirmedPaid} confirmedShipped={confirmedShipped} order={order}
+                              expanded={expanded} setExpanded={setExpanded}/>
+                {expanded && <>
+                    <ShippingInfo order={order}/>
+                    <OrderDetails order={order}/>
+                </>}
+            </div>
+        })}
+    </div>
 
-                            <p>{order.shippingInfo.streetName} {order.shippingInfo.houseNumber}</p>
-                            <p>{order.shippingInfo.postalCode} {order.shippingInfo.city}</p>
-
-                            <h3>Contact</h3>
-                            <p>{order.shippingInfo.firstName} {order.shippingInfo.lastName}</p>
-                            <p>{order.shippingInfo.phoneNumber}</p>
-                            <p>{order.shippingInfo.email}</p>
-                        </div>
-                        <h3>Order Summary</h3>
-                        <table className="order__summary">
-                            <tr>
-                                <th>Product ID</th>
-                                <th>Product name</th>
-                                <th>Product qty</th>
-                                <th>Product price</th>
-                            </tr>
-                            {order.order.map(product => {
-                                return <tr>
-                                    <td>{product.id}</td>
-                                    <td>{product.name}</td>
-                                    <td>{product.qty}</td>
-                                    <td>{product.price}</td>
-                                </tr>
-                            })}
-                        </table>
-                    </>}
-                </div>
-            })}
-        </div>
-
-    )
+)
 }
 
 export default OrderPage;

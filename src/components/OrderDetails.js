@@ -1,4 +1,4 @@
-function OrderSummary({order}) {
+function OrderDetails({order}) {
 
     return (
         <>
@@ -24,4 +24,4 @@ function OrderSummary({order}) {
     )
 }
 
-export default OrderSummary;
+export default OrderDetails;
