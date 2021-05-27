@@ -1,5 +1,5 @@
 aside {
-    background-color: white;
+    background-color: #F7F5DF;
     position: fixed;
     right: -340px;
     transition: 0.3s;
@@ -16,14 +16,14 @@ aside {
 aside:hover {
     right: 0;
     overflow-y: scroll;
-    background-color: white;
+    background-color: #f7f6f2;
 }
 
 .cart__icon {
     transform: translateX(-100px);
     padding: 2rem 0rem 2rem 1rem;
-    background-color: white;
-    color: pink;
+    background-color: #f7f6f2;
+    color: red;
 }
 
 .cart__button__badge--overlap {

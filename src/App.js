@@ -1,7 +1,7 @@
 import {
     BrowserRouter as Router,
     Switch,
-    Route, Redirect, NavLink,
+    Route, Redirect, useHistory
 } from 'react-router-dom';
 import './App.css';
 import ProductPage from "./pages/ProductPage";
@@ -21,6 +21,11 @@ function App() {
     const {user} = useAuth();
     const {cartItems} = useCart();
 
+    const history = useHistory();
+    function handleClick() {
+        history.push("/shopping-cart")
+    }
+
     return (
 
                 <Router>
@@ -34,6 +39,7 @@ function App() {
                                 : ('')}
 
                         </div>
+                        <button onClick=" ">Exstensive overview</button>
                         <ShoppingCart />
                     </aside>
                     <TopMenu/>

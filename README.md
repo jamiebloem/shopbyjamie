@@ -19,7 +19,8 @@ This webshop application shows the handmade jewelry shop of a friend of mine. Yo
 
 ## 2.   Requirements
 The following items are required to run this React application:
-* [Firebase](#https://firebase.google.com/) account (You will only need Authentication)
+* [Firebase](#https://firebase.google.com/) account 
+* Node.js (version 14.15.4)
 
 ## 3.   Installation
 ### A. Clone the Repository
@@ -36,7 +37,7 @@ On your terminal, go to the project directory and install all of the required de
 
 ```shell
 # Go to the project directory.
-$ cd react-my-app
+$ cd shopbyjamie
 # Install all of the dependencies.
 $ npm install
 # Or if you prefer to use Yarn.

@@ -1,6 +1,5 @@
 .topmenu__header {
-    /*HIER KOMT HET LOGO EN PROFILE, WINKELWAGEN BUTTON*/
-    border: solid grey 1px;
+    background-color: #f7f6f2;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -34,7 +33,7 @@
 
 
 .topmenu__sub-header {
-    background-color: #beb2e0;
+    background-color: hsl(0, 100%, 70%);;
     display: flex;
     justify-content: center;
     font-style: italic;
@@ -43,7 +42,7 @@
 }
 
 .cart__button__badge {
-    background-color: #beb2e0;
+    background-color: #F7F5DF;
     border: none;
     color: black;
     width: 1.5rem;

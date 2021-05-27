@@ -4,6 +4,7 @@ import {useState} from 'react';
 import {useCart} from "../Helper/ShoppingCartContext";
 import app from '../module/Firebase.js';
 import ShoppingCart from "./ShoppingCart";
+import PriceSummary from "../components/PriceSummary";
 
 const db = app.firestore();
 
@@ -42,18 +43,7 @@ function CheckoutPage() {
             <h1>Check Out</h1>
             {succes ? <h3>Your order is completed</h3> :
                 <>
-            <div className="cart__row">
-                <div>Items Price</div>
-                <div className="cart__row_right">€{itemsPrice.toFixed(2)}</div>
-            </div>
-            <div className="cart__row">
-                <div>Shipping Price</div>
-                <div className="cart__row_right">€{shippingPrice.toFixed(2)}</div>
-            </div>
-            <div className="cart__row">
-                <div><strong>Total Price</strong></div>
-                <div className="cart__row_right"><strong>€{totalPrice.toFixed(2)}</strong></div>
-            </div>
+            <PriceSummary/>
 
 
 
@@ -63,8 +53,6 @@ function CheckoutPage() {
                     <label htmlFor="email">Email address
                         <input type="email"
                                name="email"
-                            // value={email}
-                            // onChange={(e) => setEmail(e.target.value)}
                                id="email"
                                {...register('email', {
                                    required: true,
@@ -79,8 +67,6 @@ function CheckoutPage() {
                     <label htmlFor="firstName">First name
                         <input type="text"
                                name="firstName"
-                            // value={firstName}
-                            // onChange={(e) => setFirstName(e.target.value)}
                                id="firstName"
                                {...register('firstName', {
                                    required: {value: true, message: "This field is required"},

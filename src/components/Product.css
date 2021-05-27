@@ -3,6 +3,8 @@
     flex-direction: column;
     padding: 1rem;
     font-family: var(--font-family);
+    justify-content: center;
+    align-items: center;
 }
 
 .product {
@@ -20,8 +22,8 @@
 }
 
 .product__button {
-    background-color: #beb2c3;
-    width: 20rem;
+    background-color: #f7f6f2;
     cursor: pointer;
+    width: 10rem;
 }
 
