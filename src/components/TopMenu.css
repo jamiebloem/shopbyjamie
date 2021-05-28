@@ -1,5 +1,5 @@
 .topmenu__header {
-    background-color: #f7f6f2;
+    background-color: white;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -27,23 +27,28 @@
     display: flex;
     justify-content: space-evenly;
     color: white;
-    height: 30px;
+    height: 2rem;
+    padding-top: 0.5rem;
     font-family: var(--font-family);
 }
 
 
 .topmenu__sub-header {
-    background-color: hsl(0, 100%, 70%);;
+    background-color: var(--color-primary);
     display: flex;
     justify-content: center;
     font-style: italic;
-    height: 30px;
+    height: 2rem;
     font-family: var(--font-family);
+    padding-top: 0.5rem;
 }
 
 .cart__button__badge {
-    background-color: #F7F5DF;
+    background-color: var(--color-primary);
     border: none;
     color: black;
     width: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
+

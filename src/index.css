@@ -6,13 +6,10 @@
 }
 
 :root {
-    --color-primary: black;
-    --color-secundary: pink;
+    --color-primary: #F7DFF0;
     --font-size: 1rem;
     --font-color: black;
     --font-family: 'Raleway', sans-serif;
-
-
 }
 
 ul {
@@ -21,16 +18,16 @@ ul {
 
 h1 {
     font-family: var(--font-family);
-    padding: 1rem;
+    margin: 0;
+    padding: 0;
+
 }
 h2 {
     font-family: var(--font-family);
     padding: 1rem;
 }
 
-
-
 button {
     font-family: var(--font-family);
-    background-color: #F7F5DF;
+    background-color: var(--color-primary);
 }

@@ -8,7 +8,6 @@ function ProductList() {
 
     return (
         <main className="product__page">
-            <h1>Products</h1>
             <div className="product__list">
                     {products.map((product, index) => {
                         return <Product product={product} />

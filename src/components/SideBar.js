@@ -2,6 +2,7 @@ import {RiShoppingBagLine} from "react-icons/ri";
 import ShoppingCart from "../pages/ShoppingCart";
 import {useCart} from "../Helper/ShoppingCartContext";
 import {useHistory} from "react-router-dom";
+import './SideBar.css'
 
 function SideBar() {
     const {cartItems} = useCart();

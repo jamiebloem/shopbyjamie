@@ -13,7 +13,6 @@ function TopMenu(props) {
     return (
         <nav>
             <div className="topmenu__header">
-                <h2 className="topmenu__heading">Het Kralen Meisje</h2>
                 <img className="topmenu__logo" src={Logo} />
             </div>
             <div className="topmenu__navigation">
@@ -44,7 +43,7 @@ function TopMenu(props) {
                 </ul>
             </div>
             <div className="topmenu__sub-header">
-                Handmade Jewellery
+                Handmade Jewellery by Het Kralen Meisje
             </div>
         </nav>
 )

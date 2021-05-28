@@ -1,0 +1,8 @@
+.price__summary {
+    border-width:5px;
+    border-style:dotted solid double dashed;
+    border-color: var(--color-primary);
+    width: 30rem;
+    padding: 1rem;
+    margin-left: 2rem;
+}

@@ -1,0 +1,26 @@
+.cart__row {
+    font-family: var(--font-family);
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    margin-left: 2rem;
+}
+
+.cart__text-right {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+.cart__button__add, .cart__button__remove {
+    width: 2.5rem;
+    font-size: 2em;
+    border: transparent;
+}
+
+
+.cart__buttons {
+    display: flex;
+    margin-left: 2rem;
+    border: transparent;
+}

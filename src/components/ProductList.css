@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     max-width: 1200px;
     justify-content: space-evenly;
+    padding-top: 3rem;
 }
 
 .product__page {

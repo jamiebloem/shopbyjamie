@@ -19,11 +19,21 @@
 .product__image {
     width: 20rem;
     cursor: pointer;
+
 }
 
 .product__button {
-    background-color: #f7f6f2;
+    background-color: var(--color-primary);
     cursor: pointer;
-    width: 10rem;
+    width: 15rem;
+    margin: -1rem;
+    border: transparent;
 }
 
+.product__description {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

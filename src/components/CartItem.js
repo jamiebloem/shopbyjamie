@@ -1,5 +1,6 @@
 import {RiAddBoxLine, RiSubtractLine} from "react-icons/ri";
 import {useCart} from "../Helper/ShoppingCartContext";
+import './CartItem.css'
 
 function CartItem( {item}) {
     const {onAdd, onRemove} = useCart();

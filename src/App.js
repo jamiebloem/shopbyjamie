@@ -14,7 +14,7 @@ import OrderPage from "./pages/OrderPage";
 import LoginContextComponent, {useAuth} from './Helper/LoginContext.js'
 import PrivateRoute from "./components/PrivateRoute";
 import SideBar from "./components/SideBar";
-
+import Footer from './components/Footer'
 
 function App() {
     const {user} = useAuth();
@@ -44,6 +44,7 @@ function App() {
                         <OrderPage/>
                     </PrivateRoute>
                 </Switch>
+                <Footer/>
             </div>
         </Router>
 

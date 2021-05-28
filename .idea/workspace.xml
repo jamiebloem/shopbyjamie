@@ -2,16 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4001cc6f-1b79-4572-a4ea-85044861f341" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CartItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/OrderDetails.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ShippingInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CartItem.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/OrderSummary.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PriceSummary.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SideBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/OrderSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrderSummary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CartItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PriceSummary.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PriceSummary.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/OrderPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/OrderPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ShoppingCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ShoppingCart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Product.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopMenu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopMenu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/CheckoutPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/CheckoutPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ShoppingCart.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ShoppingCart.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +35,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -100,7 +113,7 @@
       <workItem from="1620889050476" duration="17761000" />
       <workItem from="1620992715160" duration="27194000" />
       <workItem from="1621516519622" duration="25660000" />
-      <workItem from="1622048640573" duration="9616000" />
+      <workItem from="1622048640573" duration="18804000" />
     </task>
     <servers />
   </component>
