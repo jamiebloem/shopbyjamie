@@ -27,3 +27,8 @@
     align-items: center;
 }
 
+.cart {
+    margin-bottom: 5rem;
+    min-height: 80vh;
+}
+

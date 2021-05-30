@@ -50,7 +50,7 @@ function CheckoutPage() {
             <div className="cart__form">
 
                     <form onSubmit={handleSubmit(onSubmit)}>
-                    <label htmlFor="email">Email address
+                    <label htmlFor="email"><span>Email address</span>
                         <input type="email"
                                name="email"
                                id="email"
@@ -229,11 +229,10 @@ function CheckoutPage() {
                                 {errors.cityName && <p className="error">{errors.cityName.message}</p>}
                             </label>
                         </>
-
                     )
                     }
 
-                    <button onChange={onSubmit} onClick={() => setSucces(!succes)}>Confirm order</button>
+                    <button onChange={onSubmit} onClick={() => setSucces(succes)}>Confirm order</button>
 
 
                 </form>

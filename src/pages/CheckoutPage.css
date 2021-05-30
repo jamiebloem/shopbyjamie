@@ -5,43 +5,7 @@
     width: 29rem;
 }
 
-.cart__row_right {
-    width: 23rem;
-}
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-    font-family: var(--font-family);
-    width: 30rem;
-}
-
-input {
-    width: 15rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: var(--font-family);
-}
-
-label {
-    margin: 0.5rem;
-    width: 30rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-h1 {
-    margin: 2rem;
-}
-
-
-h3 {
-    margin: 0.5rem;
-}
 .error {
     color: red;
 }
@@ -53,6 +17,3 @@ button {
     border: transparent;
 }
 
-#checkbox {
-
-}

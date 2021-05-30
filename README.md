@@ -2,7 +2,7 @@
 [React application](https://github.nl/jamiebloem/shopbyjamie)  app using  [Firebase Authentication](https://firebase.google.com/docs/auth/).
 
 
-## ADD SCREENSHOT
+![img.png](img.png)
 
 
 ## Table of Contents
@@ -11,11 +11,8 @@
 3. Installation
 4. Other available commands
 
-
-
-
 ## 1.   App description
-This webshop application shows the handmade jewelry shop of a friend of mine. You can simply add products to your shoppingcart and checkout with an checkout form. 
+This webshop application shows the handmade jewelery shop of a friend of mine. You can simply add products to your shoppingcart and checkout with an checkout form. 
 
 ## 2.   Requirements
 The following items are required to run this React application:
@@ -43,23 +40,43 @@ $ npm install
 # Or if you prefer to use Yarn.
 $ yarn install
 ```
-### C.1 Configure the Firebase API Key
-If you don't have the Firebase API key, you can go to their website at [firebase.google.com](https://firebase.google.com/) and create a new account for free.
+###C.0 Novi Examinator Firebase
+**If you are checking this assignment for Novi Hogeschool, you can use my Firebase credentials. I've included a .env file with my assignment, so you don't need to configure Firebase to test the app.
+To test the app use this email: owner@owner.com, and password: abcd1234.**
 
-Copy the `.env.dist` file:
-```shell
-cp ...env.dist ..env
-```
-Open the `.env` file and set the `REACT_APP_FIREBASE_API_KEY` with your own Firebase API KEY:
+
+### C.1 Configure Firebase 
+If you don't have a Firebase backend , you can go to their website at [firebase.google.com](https://firebase.google.com/) and create a new account for free.
+
+After you created an account, do the following steps:
+1. Go to your console
+2. Click on 'Add project' and typ your project name
+3. Enable Google Analytics for this project
+4. Click create project
+5. Register a new app
+6. Copy the credentials to the .env file (see steps below)
+7. Go to authentication in Firebase
+8. Click: get started
+9. Click: email/password
+10. Click: enable
+11. Create an webshopowner by adding a user with email and password
+12. Go to Firebase Database
+13. Create Database
+14. Select Test mode and your locations
+15. Click done
+
+Creat a .env file in the root of this folder
+
+Open the `.env` file and add the Firebase credentials in your own file:
 ```
 
-REACT_APP_FIREBASE_API_KEY=
-REACT_APP_FIREBASE_AUTH_DOMAIN=
-REACT_APP_FIREBASE_PROJECT_ID=
-REACT_APP_FIREBASE_STORAGE_BUCKET=
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
-REACT_APP_FIREBASE_APP_ID=
-REACT_APP_FIREBASE_MEASUREMENT_ID=
+REACT_APP_FIREBASE_API_KEY=<YOUR CREDENTIALS HERE>
+REACT_APP_FIREBASE_AUTH_DOMAIN=<YOUR CREDENTIALS HERE>
+REACT_APP_FIREBASE_PROJECT_ID=<YOUR CREDENTIALS HERE>
+REACT_APP_FIREBASE_STORAGE_BUCKET=<YOUR CREDENTIALS HERE>
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=<YOUR CREDENTIALS HERE>
+REACT_APP_FIREBASE_APP_ID=<YOUR CREDENTIALS HERE>
+
 ```
 ### D. Run the application
 To run the application within the development mode, type the following command:

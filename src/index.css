@@ -31,3 +31,48 @@ button {
     font-family: var(--font-family);
     background-color: var(--color-primary);
 }
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    font-family: var(--font-family);
+    width: 30rem;
+}
+
+input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: var(--font-family);
+}
+
+label {
+    margin: 0.5rem;
+    /*width: 30rem;*/
+    display: flex;
+    justify-content: space-between;
+}
+
+
+h1 {
+    margin: 2rem;
+}
+
+
+h3 {
+    margin: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    label {
+        flex-direction: column;
+    }
+
+    form {
+        width: 80vw;
+        padding-left: 2rem;
+    }
+}

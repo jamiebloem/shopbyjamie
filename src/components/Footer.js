@@ -8,7 +8,6 @@ function Footer() {
             <div className="footer__information">
             <p>FOOTER INFORMATION</p>
             <p>FOOTER INFORMATION</p>
-            <p>FOOTER INFORMATION</p>
             </div>
         </div>
     )

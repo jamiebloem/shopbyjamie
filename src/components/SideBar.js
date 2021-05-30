@@ -12,7 +12,6 @@ function SideBar() {
         history.push("/shopping-cart")
     }
 
-
     return (
         <aside>
             <div className="cart__icon">
@@ -23,7 +22,7 @@ function SideBar() {
                     : ('')}
 
             </div>
-            <button onClick={handleClick}>Exstensive overview</button>
+            <button className="overview__button" onClick={handleClick}>Exstensive overview</button>
             <ShoppingCart />
         </aside>
     )}

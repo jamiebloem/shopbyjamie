@@ -15,7 +15,7 @@ function ShoppingCart() {
     }
 
     return (
-        <>
+        <div className="cart">
             <h1>Shopping Cart</h1>
             <div className="cart__display-products">
                 {cartItems.length === 0 && <div className="cart__display-products">Cart is Empty</div>}
@@ -31,7 +31,7 @@ function ShoppingCart() {
                     </button>
                 </>
             )}
-        </>
+        </div>
     )
 };
 
