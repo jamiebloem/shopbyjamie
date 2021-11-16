@@ -1,4 +1,4 @@
-# React Open Weather App with Firebase authentication
+# React Webshop using Firebase as a backend
 [React application](https://github.nl/jamiebloem/shopbyjamie)  app using  [Firebase Authentication](https://firebase.google.com/docs/auth/).
 
 
