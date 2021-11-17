@@ -9,7 +9,7 @@ const Product = (props) => {
     return (
         <div className="product__container">
 
-            <img className="product__image" src={product.imageUrl} onClick={() => onAdd(product)}/>
+            <img alt="product" className="product__image" src={product.imageUrl} onClick={() => onAdd(product)}/>
 
             <div className="product__description">
                 <strong>{product.name}</strong>

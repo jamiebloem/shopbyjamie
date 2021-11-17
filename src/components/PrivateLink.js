@@ -1,8 +1,7 @@
 import {useAuth} from "../Helper/LoginContext";
-import {Route, Redirect, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 function PrivateLink(props) {
-    console.log("LOG", props)
     const {user} = useAuth();
 
     return (

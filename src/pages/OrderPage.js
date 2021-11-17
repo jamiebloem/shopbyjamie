@@ -1,4 +1,3 @@
-import {useAuth} from "../Helper/LoginContext";
 import app from '../module/Firebase.js';
 import {useEffect, useState} from "react";
 import './OrderPage.css'
@@ -11,7 +10,6 @@ const db = app.firestore();
 
 const OrderPage = () => {
     const [expanded, setExpanded] = useState(false)
-    const {user} = useAuth();
     const [orders, setOrders] = useState();
 
 

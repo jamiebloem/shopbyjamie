@@ -1,4 +1,4 @@
-import {Link, NavLink, useHistory} from 'react-router-dom'
+import {NavLink, useHistory} from 'react-router-dom'
 import './TopMenu.css';
 import Logo from '../assets/logo.png'
 import {useCart} from "../Helper/ShoppingCartContext";
@@ -7,7 +7,7 @@ import app from '../module/Firebase';
 import {useAuth} from "../Helper/LoginContext";
 
 function TopMenu(props) {
-    const {cartItems, setCartItems} = useCart();
+    const {cartItems} = useCart();
     const {user} = useAuth();
 
 
@@ -20,7 +20,7 @@ function TopMenu(props) {
     return (
         <nav>
             <div className="topmenu__header">
-                <img className="topmenu__logo" src={Logo} onClick={handleClick}/>
+                <img alt="logo" className="topmenu__logo" src={Logo} onClick={handleClick}/>
             </div>
             <div className="topmenu__navigation">
                 <ul>

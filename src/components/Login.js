@@ -7,7 +7,7 @@ import {useAuth} from "../Helper/LoginContext";
 
 function Login() {
     const {register, handleSubmit, formState: {errors}} = useForm();
-    const {user, setUser} = useAuth();
+    const {setUser} = useAuth();
 
         const loginHandler = async (data) => {
         try {
