@@ -1,16 +1,15 @@
 import './CheckoutPage.css'
-import {set, useForm} from 'react-hook-form';
+import {useForm} from 'react-hook-form';
 import {useState} from 'react';
 import {useCart} from "../Helper/ShoppingCartContext";
 import app from '../module/Firebase.js';
-import ShoppingCart from "./ShoppingCart";
 import PriceSummary from "../components/PriceSummary";
 
 const db = app.firestore();
 
 function CheckoutPage() {
     const {register, handleSubmit, formState: {errors}, watch} = useForm();
-    const {cartItems, setCartItems, totalPrice, itemsPrice, shippingPrice} = useCart();
+    const {cartItems, totalPrice, itemsPrice, shippingPrice} = useCart();
     const [succes, setSucces] = useState(false);
 
 
@@ -36,16 +35,12 @@ function CheckoutPage() {
 
     const watchBillingAddress = watch("billingAddress", false);
 
-    console.log(errors)
-
     return (
         <>
             <h1>Check Out</h1>
             {succes ? <h3>Your order is completed</h3> :
                 <>
             <PriceSummary/>
-
-
 
             <div className="cart__form">
 
@@ -94,7 +89,7 @@ function CheckoutPage() {
                                    required: true,
                                    message: "This field is required",
                                    pattern: {
-                                       value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/,
+                                       value: /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s/0-9]*$/,
                                        message: "Please enter a phone number"
                                    },
                                    maxLength: {
@@ -232,7 +227,7 @@ function CheckoutPage() {
                     )
                     }
 
-                    <button onChange={onSubmit} onClick={() => setSucces(succes)}>Confirm order</button>
+                    <button onChange={onSubmit} onClick={() => setSucces(true)}>Confirm order</button>
 
 
                 </form>
@@ -240,7 +235,7 @@ function CheckoutPage() {
             </div>  </> }
                 </>
     )
-};
+}
 
 
 export default CheckoutPage;

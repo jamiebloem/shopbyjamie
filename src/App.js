@@ -1,7 +1,7 @@
 import {
     BrowserRouter as Router,
     Switch,
-    Route, Redirect, useHistory
+    Route, Redirect
 } from 'react-router-dom';
 import './App.css';
 import ProductPage from "./pages/ProductPage";
@@ -11,7 +11,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import SignIn from "./pages/SignIn";
 import ShoppingCart from "./pages/ShoppingCart";
 import OrderPage from "./pages/OrderPage";
-import LoginContextComponent, {useAuth} from './Helper/LoginContext.js'
+import {useAuth} from './Helper/LoginContext.js'
 import PrivateRoute from "./components/PrivateRoute";
 import SideBar from "./components/SideBar";
 import Footer from './components/Footer'
