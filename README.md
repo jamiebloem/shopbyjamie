@@ -2,6 +2,8 @@
 [React application](https://github.nl/jamiebloem/shopbyjamie)  app using  [Firebase Authentication](https://firebase.google.com/docs/auth/).
 
 
+### [Check the deployed version here](https://shopbyjamie.vercel.app/)
+
 ![img.png](img.png)
 
 
