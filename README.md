@@ -16,6 +16,13 @@
 ## 1.   App description
 This is a self-built app in React. It is a webshop application that shows the handmade jewelery shop of a friend of mine. The user can upload their product images and see the customer orders in Firebase. The custumor can simply add products to your shoppingcart and checkout with an checkout form. 
 
+### Technologies used
+- HTML
+- CSS
+- React
+- Firebase
+- JavaScript
+
 ## 2.   Requirements
 The following items are required to run this React application:
 * [Firebase](#https://firebase.google.com/) account 
